@@ -24,7 +24,7 @@ Plugin::load('Deleted');
 Load the Deleted Behavior
 ---------------------
 
-Load the Behavior in your src/Model/Table/YourModel.php (or if You have AppModel.php). The default field named is `deleted` and type `DATE` OR `DATETIME`.
+Load the Behavior in your src/Model/Table/YourTable.php (or if You have AppTable.php). The default field named is `deleted` and type `DATE` OR `DATETIME`.
 
 ```
     public function initialize(array $config)
