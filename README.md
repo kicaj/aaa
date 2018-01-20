@@ -5,7 +5,7 @@ This Deleted plugin enable soft deletable. Entities aren't removed from your dat
 
 ## Requirements
 
-It'w tested on CakePHP 3.x.
+It is developed for CakePHP 3.x.
 
 ## Installation
 
