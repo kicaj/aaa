@@ -1,6 +1,6 @@
 {
-	"name" : "kicaj/deleted",
-	"description" : "Deleted plugin for CakePHP",
+	"name" : "kicaj/delete",
+	"description" : "Delete plugin for CakePHP",
 	"type" : "cakephp-plugin",
 	"license" : "MIT",
 	"support" : {
