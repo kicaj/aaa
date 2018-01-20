@@ -1,11 +1,11 @@
 {
-	"name" : "kicaj/deleted",
-	"description" : "Deleted plugin for CakePHP",
+	"name" : "kicaj/delete",
+	"description" : "Delete plugin for CakePHP",
 	"type" : "cakephp-plugin",
 	"license" : "MIT",
 	"support" : {
-		"issues" : "https://github.com/kicaj/deleted/issues",
-		"source" : "https://github.com/kicaj/deleted"
+		"issues" : "https://github.com/kicaj/delete/issues",
+		"source" : "https://github.com/kicaj/delete"
 	},
 	"authors" : [{
 			"name" : "kicaj",
@@ -13,7 +13,7 @@
 			"role" : "Author"
 		}, {
 			"name" : "Others",
-			"homepage" : "https://github.com/kicaj/deleted/graphs/contributors"
+			"homepage" : "https://github.com/kicaj/delete/graphs/contributors"
 		}
 	],
 	"require" : {
@@ -21,7 +21,7 @@
 	},
 	"autoload" : {
 		"psr-4" : {
-			"Deleted\\" : "src"
+			"Delete\\" : "src"
 		}
 	},
 	"minimum-stability" : "dev"
