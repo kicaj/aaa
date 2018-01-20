@@ -32,13 +32,13 @@ public function initialize(array $config)
     parent::initialize($config);
 
     $this->addBehavior('Deleted.Deleted', [
-        'field' => 'deleted' // It's default name
+        'field' => 'deleted', // It's default name
     ]);
 }
 ```
 You can configuration to customize the Deleted plugin:
 ```
     $this->addBehavior('Deleted.Deleted', [
-        'field' => 'deleted_at' // Change column field name
+        'field' => 'deleted_at', // Change column field name
     ]);
 ```
