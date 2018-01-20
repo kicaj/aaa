@@ -1,6 +1,6 @@
-# Deleted plugin for CakePHP
+# Delete plugin for CakePHP
 
-This Deleted plugin enable soft deletable.  
+This Delete plugin enable soft deletable.  
 Entities aren't removed from your database. Instead, a deleted timestamp is set on the record.
 
 ## Requirements
@@ -14,16 +14,16 @@ You can install plugin into your CakePHP application using [composer](http://get
 The recommended way to install composer packages is:
 
 ```
-composer require kicaj/deleted
+composer require kicaj/delete
 ```
 
 Load the Plugin
 -----------
 
-Ensure the Deleted plugin is loaded in your config/bootstrap.php file
+Ensure the Delete plugin is loaded in your config/bootstrap.php file
 
 ```
-Plugin::load('Deleted');
+Plugin::load('Delete');
 ```
 
 Load the Behavior
@@ -36,14 +36,14 @@ public function initialize(array $config)
 {
     parent::initialize($config);
 
-    $this->addBehavior('Deleted.Deleted', [
+    $this->addBehavior('Delete.Deleted', [
         'field' => 'deleted', // It's default name
     ]);
 }
 ```
 You can configuration to customize the Deleted plugin:
 ```
-    $this->addBehavior('Deleted.Deleted', [
+    $this->addBehavior('Delete.Deleted', [
         'field' => 'deleted_at', // Change column field name
     ]);
 ```
