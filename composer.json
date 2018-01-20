@@ -21,7 +21,7 @@
 	},
 	"autoload" : {
 		"psr-4" : {
-			"Deleted\\" : "src"
+			"Delete\\" : "src"
 		}
 	},
 	"minimum-stability" : "dev"
