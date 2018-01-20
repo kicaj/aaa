@@ -1,5 +1,5 @@
 <?php
-namespace App\Model\Behavior;
+namespace Delete\Model\Behavior;
 
 use Cake\Datasource\EntityInterface;
 use Cake\Database\Expression\Comparison;
