@@ -26,7 +26,7 @@ Ensure the Deleted plugin is loaded in your config/bootstrap.php file
 Plugin::load('Deleted');
 ```
 
-Load the Deleted Behavior
+Load the Behavior
 ---------------------
 
 Load the Behavior in your src/Model/Table/YourTable.php (or if You have AppTable.php). The default field named is `deleted` and compatible type with `Time::now()` (eg. `DATE` or `DATETIME`).
