@@ -24,21 +24,21 @@ Plugin::load('Deleted');
 Load the Deleted Behavior
 ---------------------
 
-Load the Behavior in your src/Model/Table/YourTable.php (or if You have AppTable.php). The default field named is `deleted` and type `DATE` OR `DATETIME`.
+Load the Behavior in your src/Model/Table/YourTable.php (or if You have AppTable.php). The default field named is `deleted` and compatible type with `Time::now()` (eg. `DATE` or `DATETIME`).
 
 ```
     public function initialize(array $config)
     {
         parent::initialize($config);
 
-        $this->addBehavior('Deleted', [
+        $this->addBehavior('Deleted.Deleted', [
             'field' => 'deleted' // It's default name
         ]);
     }
 ```
 You can configuration to customize the Deleted plugin:
 ```
-        $this->addBehavior('Deleted', [
+        $this->addBehavior('Deleted.Deleted', [
             'field' => 'deleted_at' // Change column field name
         ]);
 ```
