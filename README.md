@@ -1,6 +1,5 @@
 # Deleted plugin for CakePHP
 
-It's still in development mode, do not use in production yet!
 This Deleted plugin enable soft deletable. Entities aren't removed from your database. Instead, a deleted timestamp is set on the record.
 
 ## Requirements
@@ -14,7 +13,7 @@ You can install this plugin into your CakePHP (tested on 3.5) application using 
 The recommended way to install composer packages is:
 
 ```
-composer require kicaj/deleted dev-master
+composer require kicaj/deleted
 ```
 
 Load the Plugin
