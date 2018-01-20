@@ -11,3 +11,34 @@ The recommended way to install composer packages is:
 ```
 composer require kicaj/deleted dev-master
 ```
+
+Load the Plugin
+-----------
+
+Ensure the Deleted plugin is loaded in your config/bootstrap.php file
+
+```
+Plugin::load('Deleted');
+```
+
+Load the Deleted Behavior
+---------------------
+
+Load the Behavior in your src/Model/Table/YourModel.php (or if You have AppModel.php). The default field named is `deleted` and type `DATE` OR `DATETIME`.
+
+```
+    public function initialize(array $config)
+    {
+        parent::initialize($config);
+
+        $this->addBehavior('Deleted', [
+            'field' => 'deleted' // It's default name
+        ]);
+    }
+```
+You can configuration to customize the Deleted plugin:
+```
+        $this->addBehavior('Deleted', [
+            'field' => 'deleted_at' // Change column field name
+        ]);
+```
