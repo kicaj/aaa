@@ -1,6 +1,11 @@
 # Deleted plugin for CakePHP
 
 It's still in development mode, do not use in production yet!
+This Deleted plugin enable soft deletable. Entities aren't removed from your database. Instead, a deleted timestamp is set on the record.
+
+## Requirements
+
+It'w tested on CakePHP 3.x.
 
 ## Installation
 
