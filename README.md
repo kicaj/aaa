@@ -29,7 +29,7 @@ Plugin::load('Delete');
 Load the Behavior
 ---------------------
 
-Load the Behavior in your src/Model/Table/YourTable.php (or if You have AppTable.php). The default field named is `deleted` and compatible type with `Time::now()` (eg. `DATE` or `DATETIME`).
+Load the Behavior in your src/Model/Table/YourTable.php (or if You have AppTable.php). The default field named in database is `deleted` and should be compatible type with `Time::now()` (eg. `DATE` or `DATETIME`).
 
 ```
 public function initialize(array $config)
