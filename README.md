@@ -36,9 +36,7 @@ public function initialize(array $config)
 {
     parent::initialize($config);
 
-    $this->addBehavior('Delete.Deleted', [
-        'field' => 'deleted', // It's default name
-    ]);
+    $this->addBehavior('Delete.Deleted');
 }
 ```
 You can configuration to customize the Deleted plugin:
