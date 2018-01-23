@@ -39,7 +39,7 @@ public function initialize(array $config)
     $this->addBehavior('Delete.Deleted');
 }
 ```
-You can configuration to customize the Deleted plugin:
+You can configuration to customize the Delete plugin:
 ```
 $this->addBehavior('Delete.Deleted', [
     'field' => 'deleted_at', // Change column field name
