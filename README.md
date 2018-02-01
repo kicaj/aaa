@@ -16,18 +16,6 @@ The recommended way to install composer packages is:
 composer require kicaj/delete
 ```
 
-Load the Plugin
------------
-
-Ensure the Delete plugin is loaded in your config/bootstrap.php file
-```
-Plugin::load('Delete');
-```
-or add manually by `cake` command
-```
-cake plugin load -b -r Social
-```
-
 Load the Behavior
 ---------------------
 
