@@ -12,7 +12,6 @@ It is developed for CakePHP 3.x.
 You can install plugin into your CakePHP application using [composer](http://getcomposer.org).
 
 The recommended way to install composer packages is:
-
 ```
 composer require kicaj/delete
 ```
@@ -21,16 +20,18 @@ Load the Plugin
 -----------
 
 Ensure the Delete plugin is loaded in your config/bootstrap.php file
-
 ```
 Plugin::load('Delete');
+```
+or add manually by `cake` command
+```
+cake plugin load -b -r Social
 ```
 
 Load the Behavior
 ---------------------
 
 Load the Behavior in your src/Model/Table/YourTable.php (or if You have AppTable.php). The default field named in database is `deleted` and should be compatible type with `Time::now()` (eg. `DATE` or `DATETIME`).
-
 ```
 public function initialize(array $config)
 {
@@ -39,6 +40,7 @@ public function initialize(array $config)
     $this->addBehavior('Delete.Deleted');
 }
 ```
+
 You can configuration to customize the Delete plugin:
 ```
 $this->addBehavior('Delete.Deleted', [
