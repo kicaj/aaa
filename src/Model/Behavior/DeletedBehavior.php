@@ -23,13 +23,13 @@ class DeletedBehavior extends Behavior
      */
     public function beforeFind(Event $event, Query $query)
     {
-        if ($this->_table->hasField($this->_config['field'])) {
+        if ($this->getTable()->hasField($this->_config['field'])) {
             $deleted = true;
 
             if ($query->clause('where')) {
                 $query->clause('where')->traverse(function ($expression) use (&$deleted) {
                     if ($expression instanceof Comparison) {
-                        if ($expression->getField() === $this->_table->getAlias() . '.' . $this->_config['field']) {
+                        if ($expression->getField() === $this->getTable()->getAlias() . '.' . $this->_config['field']) {
                             $deleted = false;
                         }
                     }
@@ -37,7 +37,9 @@ class DeletedBehavior extends Behavior
             }
 
             if ($deleted === true) {
-                $query->where($this->_table->getAlias() . '.' . $this->_config['field'] . ' IS NULL');
+                $query->where([
+                    $this->getTable()->getAlias() . '.' . $this->_config['field'] . ' IS NULL',
+                ]);
             }
         }
 
@@ -49,14 +51,14 @@ class DeletedBehavior extends Behavior
      */
     public function beforeDelete(Event $event, EntityInterface $entity)
     {
-        if ($this->_table->hasField($this->_config['field'])) {
+        if ($this->getTable()->hasField($this->_config['field'])) {
             $event->stopPropagation();
 
-            $entity = $this->_table->patchEntity($entity, [
-                $this->_config['field'] => Time::now()
+            $entity = $this->getTable()->patchEntity($entity, [
+                $this->_config['field'] => Time::now(),
             ]);
 
-            return $this->_table->save($entity);
+            return $this->getTable()->save($entity);
         }
 
         return true;
