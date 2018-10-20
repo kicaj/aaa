@@ -12,16 +12,14 @@ class DeletedBehavior extends Behavior
 {
 
     /**
-     * Default config
-     *
-     * @var array
+     * {@inheritDoc}
      */
     protected $_defaultConfig = [
-        'field' => 'deleted'
+        'field' => 'deleted',
     ];
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function beforeFind(Event $event, Query $query)
     {
@@ -47,7 +45,7 @@ class DeletedBehavior extends Behavior
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function beforeDelete(Event $event, EntityInterface $entity)
     {
