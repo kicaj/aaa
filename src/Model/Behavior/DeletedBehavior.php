@@ -23,13 +23,15 @@ class DeletedBehavior extends Behavior
      */
     public function beforeFind(Event $event, Query $query)
     {
-        if ($this->getTable()->hasField($this->getConfig('field'))) {
+        $field = $this->getConfig('field');
+
+        if ($this->getTable()->hasField($field)) {
             $deleted = true;
 
             if ($query->clause('where')) {
-                $query->clause('where')->traverse(function ($expression) use (&$deleted) {
+                $query->clause('where')->traverse(function ($expression) use (&$deleted, $field) {
                     if ($expression instanceof Comparison) {
-                        if ($expression->getField() === $this->getTable()->getAlias() . '.' . $this->getConfig('field')) {
+                        if ($expression->getField() === $this->getTable()->getAlias() . '.' . $field) {
                             $deleted = false;
                         }
                     }
@@ -38,7 +40,7 @@ class DeletedBehavior extends Behavior
 
             if ($deleted === true) {
                 $query->where([
-                    $this->getTable()->getAlias() . '.' . $this->getConfig('field') . ' IS NULL',
+                    $this->getTable()->getAlias() . '.' . $field . ' IS NULL',
                 ]);
             }
         }
@@ -51,15 +53,17 @@ class DeletedBehavior extends Behavior
      */
     public function beforeDelete(Event $event, EntityInterface $entity)
     {
-        if ($this->getTable()->hasField($this->getConfig('field'))) {
+        $field = $this->getConfig('field');
+
+        if ($this->getTable()->hasField($field)) {
             $event->stopPropagation();
 
-            if ($entity->isAccessible($this->getConfig('field')) === false) {
-                $entity->setAccess($this->getConfig('field'), true);
+            if ($entity->isAccessible($field) === false) {
+                $entity->setAccess($field, true);
             }
 
-            $entity = $this->getTable()->patchEntity($entity, $a = [
-                $this->getConfig('field') => Time::now(),
+            $entity = $this->getTable()->patchEntity($entity, [
+                $field => Time::now(),
             ]);
 
             return $this->getTable()->save($entity);
