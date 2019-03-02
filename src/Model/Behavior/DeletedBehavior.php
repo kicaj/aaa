@@ -54,8 +54,12 @@ class DeletedBehavior extends Behavior
         if ($this->getTable()->hasField($this->getConfig('field'))) {
             $event->stopPropagation();
 
-            $entity = $this->getTable()->patchEntity($entity, [
-                $this->getTable()->getAlias() . '.' . $this->getConfig('field') => Time::now(),
+            if ($entity->isAccessible($this->getConfig('field')) === false) {
+                $entity->setAccess($this->getConfig('field'), true);
+            }
+
+            $entity = $this->getTable()->patchEntity($entity, $a = [
+                $this->getConfig('field') => Time::now(),
             ]);
 
             return $this->getTable()->save($entity);
