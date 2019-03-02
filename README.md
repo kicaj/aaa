@@ -2,6 +2,10 @@
 
 [![Build Status](https://scrutinizer-ci.com/g/kicaj/delete/badges/build.png?b=master)](https://scrutinizer-ci.com/g/kicaj/delete/build-status/master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/kicaj/delete/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/kicaj/delete/?branch=master)
+[![LICENSE](https://img.shields.io/github/license/kicaj/delete.svg)](https://github.com/kicaj/delete/blob/master/LICENSE)
+[![Releases](https://img.shields.io/github/release/kicaj/delete.svg)](https://github.com/kicaj/delete/releases)
+
+
 
 This Delete plugin enable soft deletable.  
 Entities aren't removed from your database. Instead, a deleted timestamp is set on the record.
