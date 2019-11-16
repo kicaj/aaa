@@ -56,6 +56,12 @@ class DeletedBehavior extends Behavior
         $field = $this->getConfig('field');
 
         if ($this->getTable()->hasField($field)) {
+            foreach ($this->getTable()->associations() as $association) {
+                $association->cascadeDelete($entity, [
+                    '_primary' => false,
+                ]);
+            }
+
             $event->stopPropagation();
 
             if ($entity->isAccessible($field) === false) {
