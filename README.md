@@ -42,3 +42,7 @@ $this->addBehavior('Delete.Deleted', [
     'field' => 'deleted_at', // Change column field name
 ]);
 ```
+
+## TODOs
+
+[ ] Add information about Migration plugin for adding `deleted` column.
