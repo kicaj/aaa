@@ -26,7 +26,7 @@ composer require kicaj/delete
 Load the Behavior
 ---------------------
 
-Load the Behavior in your src/Model/Table/YourTable.php (or if You have AppTable.php). The default field named in database table should be `deleted` (like `created` or `modified`) and compatible type with `Time::now()` (eg. `DATE` or `DATETIME`).
+Load the Behavior in your src/Model/Table/YourTable.php (or if you have AppTable.php). The default field named in database table should be `deleted` (like `created` or `modified`) and compatible type with `Time::now()` (eg. `DATE` or `DATETIME`).
 ```
 public function initialize(array $config)
 {
@@ -46,7 +46,7 @@ $this->addBehavior('Delete.Deleted', [
 ## Add column by Migrations plugin
 
 Load Migrations plugin (https://github.com/cakephp/migrations).
-Copy file from /vendor/kicaj/deleted/config/20200101122906_AddDeletedToProducts.example.php to your app main config directory, rename to 20200101122906_AddDeletedTo[YourTableName].php, nextly edit this file and rename class and update `change` method.
+Copy file from /vendor/kicaj/delete/config/20200101122906_AddDeletedToProducts.example.php to your app main config directory, rename to 20200101122906_AddDeletedTo[YourTable].php, nextly edit this file and rename class and update `change` method.
 
 Run migrations by below command:
 
