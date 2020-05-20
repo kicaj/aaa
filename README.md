@@ -1,9 +1,9 @@
 # Delete plugin for CakePHP
 
-[![Build Status](https://scrutinizer-ci.com/g/kicaj/delete/badges/build.png?b=master)](https://scrutinizer-ci.com/g/kicaj/delete/build-status/master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/kicaj/delete/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/kicaj/delete/?branch=master)
-[![LICENSE](https://img.shields.io/github/license/kicaj/delete.svg)](https://github.com/kicaj/delete/blob/master/LICENSE)
-[![Releases](https://img.shields.io/github/release/kicaj/delete.svg)](https://github.com/kicaj/delete/releases)
+[![Build Status](https://scrutinizer-ci.com/g/slicesofcake/delete/badges/build.png?b=master)](https://scrutinizer-ci.com/g/slicesofcake/delete/build-status/master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/slicesofcake/delete/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/slicesofcake/delete/?branch=master)
+[![LICENSE](https://img.shields.io/github/license/slicesofcake/delete.svg)](https://github.com/slicesofcake/delete/blob/master/LICENSE)
+[![Releases](https://img.shields.io/github/release/slicesofcake/delete.svg)](https://github.com/slicesofcake/delete/releases)
 
 
 
@@ -20,7 +20,7 @@ You can install plugin into your CakePHP application using [composer](http://get
 
 The recommended way to install composer packages is:
 ```
-composer require kicaj/delete
+composer require slicesofcake/delete
 ```
 
 Load the Behavior

@@ -1,11 +1,11 @@
 {
-	"name" : "kicaj/delete",
+	"name" : "slicesofcake/delete",
 	"description" : "Delete plugin for CakePHP",
 	"type" : "cakephp-plugin",
 	"license" : "MIT",
 	"support" : {
-		"issues" : "https://github.com/kicaj/delete/issues",
-		"source" : "https://github.com/kicaj/delete"
+		"issues" : "https://github.com/slicesofcake/delete/issues",
+		"source" : "https://github.com/slicesofcake/delete"
 	},
 	"authors" : [{
 			"name" : "kicaj",
@@ -13,7 +13,7 @@
 			"role" : "Author"
 		}, {
 			"name" : "Others",
-			"homepage" : "https://github.com/kicaj/delete/graphs/contributors"
+			"homepage" : "https://github.com/slicesofcake/delete/graphs/contributors"
 		}
 	],
 	"require" : {
@@ -21,7 +21,7 @@
 	},
 	"autoload" : {
 		"psr-4" : {
-			"Delete\\" : "src"
+			"SlicesCake\\Delete\\" : "src"
 		}
 	},
 	"minimum-stability" : "dev"
