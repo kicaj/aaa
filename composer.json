@@ -1,6 +1,6 @@
 {
 	"name" : "slicesofcake/delete",
-	"description" : "Delete plugin for CakePHP",
+	"description" : "Plugin for CakePHP for soft deleting",
 	"type" : "cakephp-plugin",
 	"license" : "MIT",
 	"support" : {

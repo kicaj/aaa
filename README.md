@@ -1,4 +1,4 @@
-# Delete plugin for CakePHP
+# Plugin for CakePHP for soft deleting
 
 [![Build Status](https://scrutinizer-ci.com/g/slicesofcake/delete/badges/build.png?b=master)](https://scrutinizer-ci.com/g/slicesofcake/delete/build-status/master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/slicesofcake/delete/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/slicesofcake/delete/?branch=master)
@@ -7,12 +7,12 @@
 
 
 
-This Delete plugin enable soft deletable.  
+This Delete plugin enable soft deletable.
 Entities aren't removed from your database. Instead, a deleted timestamp is set on the record.
 
 ## Requirements
 
-It is developed for CakePHP 3.x.
+It is developed for CakePHP 4.x.
 
 ## Installation
 
