@@ -45,11 +45,9 @@ $this->addBehavior('Delete.Deleted', [
 
 ## Add column by Migrations plugin
 
-Load Migrations plugin (https://github.com/cakephp/migrations).
-Copy file from /vendor/kicaj/delete/config/20200101122906_AddDeletedToProducts.example.php to your app main config directory, rename to 20200101122906_AddDeletedTo[YourTable].php, nextly edit this file and rename class and update `change` method.
-
-Run migrations by below command:
-
-```
-cake migrations migrate
-```
+1. Load Migrations plugin (https://github.com/cakephp/migrations).
+2. Copy file from /vendor/kicaj/delete/config/20200101122906_AddDeletedToProducts.example.php to your app main config directory.
+3. Rename to 20200101122906_AddDeletedTo[YourTable].php.
+4. Edit file and rename class with changes above.
+5. Update `change` method to set table name.
+6. Run migrations by command: ```cake migrations migrate```
