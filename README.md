@@ -1,4 +1,4 @@
-# Plugin for CakePHP for soft deleting
+# CakePHP plugin for soft deleting
 
 [![Build Status](https://scrutinizer-ci.com/g/slicesofcake/delete/badges/build.png?b=master)](https://scrutinizer-ci.com/g/slicesofcake/delete/build-status/master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/slicesofcake/delete/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/slicesofcake/delete/?branch=master)
