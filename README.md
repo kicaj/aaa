@@ -32,13 +32,13 @@ public function initialize(array $config)
 {
     parent::initialize($config);
 
-    $this->addBehavior('Delete.Deleted');
+    $this->addBehavior('SlicesCake/Delete.Deleted');
 }
 ```
 
 You can configuration to customize the Delete plugin:
 ```
-$this->addBehavior('Delete.Deleted', [
+$this->addBehavior('SlicesCake/Delete.Deleted', [
     'field' => 'deleted_at', // Change column field name
 ]);
 ```
