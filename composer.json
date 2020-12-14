@@ -23,6 +23,5 @@
 		"psr-4" : {
 			"SlicesCake\\Delete\\" : "src"
 		}
-	},
-	"minimum-stability" : "dev"
+	}
 }
